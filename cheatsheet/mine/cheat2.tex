@@ -1,0 +1,214 @@
+\documentstyle[12pt]{article}
+
+\setlength{\topmargin}{-.50in}
+\setlength{\oddsidemargin}{-0.0in}
+\setlength{\evensidemargin}{-0.0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.0in}
+
+\newcommand{\dt}{7/7/97}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\rto}{\rightarrow}
+
+\begin{document}
+\setcounter{page}{9}
+\rightline{\dt}
+
+\centerline{\Large\bf Exam 2: ``Cheat Sheet''}
+
+\noindent $\,\!$\hrulefill
+
+\noindent {\footnotesize
+\begin{enumerate}
+\parbox{2.75in}{
+\item $\ds{\int x^n\, dx=\frac{x^{n+1}}{n+1}\;\;(n\neq -1)}$
+\item $\ds{\int\frac{1}{x}\, dx=\ln|x|}$
+\item $\ds{\int e^x\, dx=e^x}$
+\item $\ds{\int a^x\, dx=\frac{a^x}{\ln a}}$
+\item $\ds{\int\sin x\, dx=-\cos x}$
+\item $\ds{\int\cos x\, dx=\sin x}$} \hspace{.25in}
+\parbox{2.75in}{
+\item $\ds{\int\sec^2 x\, dx=\tan x}$
+\item $\ds{\int\csc^2 x\, dx=-\cot x}$
+\item $\ds{\int\sec x\tan x\, dx=\sec x}$
+\item $\ds{\int\csc x\cot x\, dx=-\csc x}$
+\item $\ds{\int\frac{dx}{x^2+a^2}
+=\frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)}$ 
+\item $\ds{\int\frac{dx}{\sqrt{a^2-x^2}}
+=\sin^{-1}\left(\frac{x}{a}\right)}$}
+\end{enumerate}
+\noindent $\,\!$\hrulefill
+
+% 10.1
+\begin{enumerate}
+\setcounter{enumi}{12}
+\item A sequence $\{a_n\}$ has {\bf limit} $L$ if for every $\epsilon>0$
+there is an integer $N$ such that $|a_n-L|<\epsilon$ whenever
+$n>N$.
+
+\item $\lim_{n\rto\infty}a_n=\infty$ means for every positive number
+$M$ there is an integer $N$ such that $a_n>M$ whenever $n>N$.
+
+\item {\bf Squeeze Theorem.} If $a_n\leq b_n\leq c_n$ for $n\geq n_0$
+and $\lim_{n\rto\infty}a_n=\lim_{n\rto\infty}c_n=L$, then
+$\lim_{n\rto\infty}b_n=L$. 
+
+\item {\bf Theorem.} If $\lim_{n\rto\infty}|a_n|=0$, then
+$\lim_{n\rto\infty}a_n=0$. 
+
+\item $\{r^n\}$ is convergent if $-1<r\leq 1$ and divergent for all
+other values of $r$. 
+
+\item {\bf Theorem.} Every bounded, monotonic sequence is convergent.
+\end{enumerate}
+
+% 10.2
+\begin{enumerate}
+\setcounter{enumi}{18}
+\item The geometric series $\sum_{n=1}^{\infty}ar^{n-1}$ is convergent
+if $|r|<1$ and its sum is $\sum_{n=1}^{\infty}ar^{n-1}=\frac{a}{1-r}$.
+If $|r|\geq 1$, the geometric series is divergent.
+
+\item {\bf Test for Divergence.} If $\lim_{n\rto\infty}a_n$ does not
+exist or if $\lim_{n\rto\infty}a_n\neq 0$, then the series
+$\sum_{n=1}^{\infty}a_n$ is divergent.
+\end{enumerate}
+
+% 10.3
+\begin{enumerate}
+\setcounter{enumi}{20}
+\item {\bf The Integral Test.} Suppose $f$ is a continuous, positive,
+decreasing function on $[1,\infty)$ and let $a_n=f(n)$.  The the
+series $\sum_{n=1}^{\infty}a_n$ is convergent if and only if the
+improper integral $\int_1^{\infty}f(x)\, dx$ is convergent.
+
+\item {\bf Remainder Estimate for the Integral Test.} If $a_n$
+converges by the Integral Test and $R_n=s-s_n$, then
+\[ \int_{n+1}^{\infty}f(x)\, dx\leq R_n\leq\int_n^{\infty}f(x)\, dx \]
+\end{enumerate}
+
+% 10.4
+\begin{enumerate}
+\setcounter{enumi}{22}
+\item {\bf The Comparison Test.} Suppose that $\sum a_n$ and $\sum
+b_n$ are series with positive terms.
+
+(a) If $\sum b_n$ is convergent and $a_n\leq b_n$ for all $n$, then
+$\sum a_n$ is convergent.
+
+(b) If $\sum b_n$ is divergent and $a_n\geq b_n$ for all $n$, then
+$\sum a_n$ is divergent.
+
+\item {\bf Limit Comparison Test.} Suppose that $\sum a_n$ and $\sum
+b_n$ are series with positive terms. 
+
+(a) If $\lim_{n\rto\infty}\frac{a_n}{b_n}=c>0$, then either both series
+converge or both diverge. 
+
+(b) If $\lim_{n\rto\infty}\frac{a_n}{b_n}=0$ and $\sum b_n$ converges,
+then $\sum a_n$ also converges. 
+
+(c) If $\lim_{n\rto\infty}\frac{a_n}{b_n}=\infty$ and $\sum b_n$
+diverges, then $\sum a_n$ also diverges.
+\end{enumerate}
+
+% 10.5
+\begin{enumerate}
+\setcounter{enumi}{24}
+\item {\bf The Alternating Series Test.} If the alternating series
+$\sum_{n=1}^{\infty}(-1)^{n-1}b_n$ satisfies (a) $b_{n+1}\leq b_n$ for
+all $n$ and (b) $\lim_{n\rto\infty}b_n=0$ then the series is
+convergent.
+
+\item {\bf Alternating Series Estimation Theorem.} If
+$s=\sum(-1)^{n-1}b_n$ is the sum of an alternating series that
+satisfies (a) and (b) above, then $|R_n|=|s-s_n|\leq b_{n+1}$
+\end{enumerate}
+
+% 10.6
+\begin{enumerate}
+\setcounter{enumi}{26}
+\item A series $\sum a_n$ is {\bf absolutely convergent} if $\sum
+|a_n|$ is convergent and {\bf conditionally convergent} if $\sum a_n$
+is convergent but not absolutely convergent.
+
+\item {\bf The Ratio Test}
+
+(a) If $\lim_{n\rto\infty}\left|\frac{a_{n+1}}{a_n}\right|=L<1$, then
+the series $\sum_{n=1}^{\infty}a_n$ is absolutely convergent.
+
+(b) If $\lim_{n\rto\infty}\left|\frac{a_{n+1}}{a_n}\right|=L>1$ or is
+infinity, then the series $\sum_{n=1}^{\infty}a_n$ is divergent.
+
+\item {\bf The Root Test}
+
+(a) If $\lim_{n\rto\infty}\sqrt[n]{|a_n|}=L<1$, then the series
+$\sum_{n=1}^{\infty}a_n$ is absolutely convergent.
+
+(b) If $\lim_{n\rto\infty}\sqrt[n]{|a_n|}=L>1$ or is infinity, then
+the series $\sum_{n=1}^{\infty}a_n$ is divergent.
+\end{enumerate}
+
+% 10.8
+\begin{enumerate}
+\setcounter{enumi}{29}
+\item {\bf Theorem.} For a given power series
+$\sum_{n=0}^{\infty}c_n(x-a)^n$ there are only three possibilities:
+(i) The series converges only when $x=a$.
+(ii) The series converges for all $x$.
+(iii) There is a positive number $R$ such that the series converges if
+$|x-a|<R$ and diverges if $|x-a|>R$.
+\end{enumerate}
+
+% 10.9
+\begin{enumerate}
+\setcounter{enumi}{30}
+\item {\bf Theorem.} If $\sum c_n(x-a)^n$ has radius of convergence 
+$R>0$ then the function $f(x)=\sum_{n=0}^{\infty}c_n(x-a)^n$ is 
+differentiable on $(a-R,a+R)$ and
+
+(a) $f'(x)=\sum_{n=1}^{\infty}nc_n(x-a)^{n-1}$
+
+(b) $\int f(x)\, dx=C+\sum_{n=0}^{\infty}c_n\frac{(x-a)^{n+1}}{n+1}$,
+each with radius of convergence $R$.
+\end{enumerate}
+
+% 10.10
+\begin{enumerate}
+\setcounter{enumi}{31}
+\item {\bf Theorem.} If $f$ has a power series representation at $a$,
+that is, if $f(x)=c_n(x-a)^n$ for $|x-a|<R$, then its coefficients are
+of the form $\ds{\frac{f^{(n)}(a)}{n!}}$
+
+\item {\bf Taylor's Formula.} If $f$ has $n+1$ derivatives in an
+interval $I$ that contains the number $a$, then for $x$ in $I$ there
+is a number $z$ strictly between $x$ and $a$ such that the remainder
+term in the Tayler series can be expressed as
+\[ R_n(x)=\frac{f^{(n+1)}(z)}{(n+1)!}(x-a)^{n+1} \]
+
+\item $\ds{\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n}$.  IOC=$(-1,1)$.
+
+\item $\ds{e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}}$.  IOC=$(-\infty,\infty)$.
+
+\item $\ds{\sin x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}}$.
+IOC=$(-\infty,\infty)$.
+
+\item $\ds{\cos x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}}$.
+IOC=$(-\infty,\infty)$.
+
+\item $\ds{\tan^{-1}x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}
+{2n+1}}$.  IOC=$[-1,1]$.
+\end{enumerate}
+
+% 10.11
+\begin{enumerate}
+\setcounter{enumi}{38}
+\item {\bf The Binomial Series} If $k$ is any real number and $|x|<1$,
+then $\ds{(1+x)^k=\sum_{n=0}^{\infty}{k\choose n}x^n}$ where
+${k\choose n}=\frac{k(k-1)\cdots(k-n+1)}{n!}$ for $n\geq 1$ and
+${k\choose 0}=1$.
+\end{enumerate}
+
+}
+
+\end{document}
